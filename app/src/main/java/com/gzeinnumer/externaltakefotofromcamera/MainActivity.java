@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.gzeinnumer.externaltakefotofromcamera.helper.FunctionGlobalDir;
@@ -94,6 +95,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 Glide.with(MainActivity.this).load(mPhotoFile).into(imageView);
                 Log.d(TAG, "onActivityResult: " + mPhotoFile.toString());
+                Toast.makeText(this, "Image Path : "+mPhotoFile.toString(), Toast.LENGTH_SHORT).show();
             }
         }
     }
